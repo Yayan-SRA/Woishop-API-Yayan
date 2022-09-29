@@ -1,0 +1,116 @@
+###
+POST http://localhost:8000/api/v1/create
+Content-Type: application/json
+
+{
+    "product_name":"Kacang Garuda",
+    "price":"6000",
+    "image":"kacang.jpg",
+    "describtion": "makanan ringan yang enak"
+}
+
+###
+GET http://localhost:8000/api/v1/allProduct
+
+###
+GET http://localhost:8000/api/v1/categoryList
+
+###
+GET http://localhost:8000/api/v1/detail/3
+
+###
+GET http://localhost:8000/api/v1/filter/1
+
+
+###
+POST http://localhost:8000/api/v1/registration
+Content-Type: application/json
+
+{
+    "full_name": "Yayansra",
+    "phone_number": "6287862477187",
+    "email": "yayanra41224@gmail.com",
+    "city": "Semarang",
+    "kecamatan": "Gunungpati",
+    "postal_code": 2995,
+    "address": "Sekaran"
+}
+
+###
+POST  http://localhost:8000/api/v1/activateAccount/6287862477187
+Content-Type: application/json
+
+{
+    "otp": "74699"
+}
+
+###
+GET http://localhost:8000/api/v1/getUser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJTb2Z5YW4gUml6a2kgQWZhbmR5IiwicGhvbmVfbnVtYmVyIjoiNjI4Nzg2MjQ3NzE4NyIsImlhdCI6MTY2MjU0MDIxNCwiZXhwIjoxNjYyNTQwMjM0fQ.yuzYTfSBIWINeYnr1BIRmwzh0Q4NZQ1dZUjPSDnt19k
+
+###
+GET http://localhost:8000/api/v1/refreshToken
+
+###
+POST  http://localhost:8000/api/v1/login
+Content-Type: application/json
+
+{
+    "phone_number": "+6287862477187"
+}
+
+###
+POST  http://localhost:8000/api/v1/inputOtp/+6287862477187
+Content-Type: application/json
+
+{
+    "otp": "7400"
+}
+
+###
+DELETE http://localhost:8000/api/v1/logout
+###
+
+DELETE http://localhost:8000/api/v1/logoutWA
+
+###
+POST http://localhost:8000/api/v1/kirim
+Content-Type: application/json
+
+{
+    "phone": "6287862477187"
+}
+
+###
+POST http://localhost:8000/api/v1/kirim
+Content-Type: application/json
+
+{
+    "phone_number":"+6287862477187"
+}
+
+###
+GET http://localhost:8000/api/v1/allCart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJTb2Z5YW4gUml6a2kgQWZhbmR5IiwicGhvbmVfbnVtYmVyIjoiNjI4Nzg2MjQ3NzE4NyIsImlhdCI6MTY2NDA5NTAyNCwiZXhwIjoxNjY0MDk1MDM5fQ.QN5MLsjZMEgDxqHPI2bESdTPqLCyWWUJIIuJb7KdV7M
+
+###
+POST http://localhost:8000/api/v1/addCart
+Content-Type: application/json
+
+{
+    "id_store": 1,
+    "id_user": 1,
+    "id_product": 3,
+    "amount": 10
+}
+
+###
+PUT http://localhost:8000/api/v1/updateCart/8
+Content-Type: application/json
+
+{
+    "amount": 10
+}
+
+###
+DELETE http://localhost:8000/api/v1/deleteCart/2
