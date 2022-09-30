@@ -22,11 +22,6 @@ router.post("/api/v1/inputOtp/:phone",userAuth.check, controllers.api.v1.authcon
 router.post("/api/v1/activateAccount/:phone", userAuth.check, controllers.api.v1.authcontrollers.activateAccount);
 router.delete("/api/v1/logout",controllers.api.v1.authcontrollers.logout);
 
-// whatsapp
-// router.delete("/api/v1/logoutWA",controllers.api.v1.authcontrollers.logoutWA)
-// router.post("/api/v1/kirim", controllers.api.v2.authcontrollers.registration);
-// router.get("/",controllers.api.v1.authcontrollers.coba);
-
 // cart
 router.get("/api/v1/allCart",userAuth.verifyToken, cart.cartAmount ,controllers.api.v1.cartController.cartList);
 router.post("/api/v1/addCart", userAuth.verifyToken,cart.checkCart ,controllers.api.v1.cartController.addCart);
