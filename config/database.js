@@ -1,31 +1,52 @@
-/** Destruct environment variable to get database configuration */
 const {
-  DB_USERNAME = "postgres",
-  DB_PASSWORD = "123",
-  DB_HOST = "127.0.0.1",
-  DB_NAME = "tugas1_AL",
-} = process.env;
-
+  DB_USER = '',
+  DB_PASSWORD = '',
+  DB_NAME = '',
+  DB_HOST = '',
+  DB_PORT = ''
+} = process.env
 module.exports = {
   development: {
-    username: DB_USERNAME,
+    username: DB_USER,
     password: DB_PASSWORD,
-    database: `${DB_NAME}_development`,
+    database: `${DB_NAME}`,
     host: DB_HOST,
-    dialect: "postgres",
+    port: DB_PORT,
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
   },
   test: {
-    username: DB_USERNAME,
+    username: DB_USER,
     password: DB_PASSWORD,
-    database: `${DB_NAME}_test`,
+    database: `${DB_NAME}`,
     host: DB_HOST,
-    dialect: "postgres",
+    port: DB_PORT,
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
   },
   production: {
-    username: DB_USERNAME,
+    username: DB_USER,
     password: DB_PASSWORD,
-    database: `${DB_NAME}_production`,
+    database: `${DB_NAME}`,
     host: DB_HOST,
-    dialect: "postgres",
-  },
-};
+    port: DB_PORT,
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
+  }
+
+}
