@@ -3,7 +3,7 @@ const {
   DB_PASSWORD = '',
   DB_NAME = '',
   DB_HOST = '',
-  PORT = ''
+  DB_PORT = ''
 } = process.env
 module.exports = {
   development: {
@@ -11,7 +11,7 @@ module.exports = {
     password: DB_PASSWORD,
     database: `${DB_NAME}`,
     host: DB_HOST,
-    port: PORT,
+    port: DB_PORT,
     dialect: 'postgres',
     dialectOptions: {
       ssl: {
@@ -25,7 +25,7 @@ module.exports = {
     password: DB_PASSWORD,
     database: `${DB_NAME}`,
     host: DB_HOST,
-    port: PORT,
+    port: DB_PORT,
     dialect: 'postgres',
     dialectOptions: {
       ssl: {
@@ -39,7 +39,7 @@ module.exports = {
     password: DB_PASSWORD,
     database: `${DB_NAME}`,
     host: DB_HOST,
-    port: PORT,
+    port: DB_PORT,
     dialect: 'postgres',
     dialectOptions: {
       ssl: {
