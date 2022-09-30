@@ -1,6 +1,5 @@
 const express = require("express");
 const cookieParser = require('cookie-parser')
-const dotenv = require('dotenv').config()
 // const cors = require("cors")
 const morgan = require("morgan");
 const router = require("../config/routes");
@@ -40,4 +39,4 @@ global.__basedir = __dirname;
 /** Install Router */
 app.use(router);
 
-module.exports = app;
+module.exports = router.apply(app)
