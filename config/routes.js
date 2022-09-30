@@ -34,7 +34,7 @@ router.delete("/api/v1/deleteCart/:id", userAuth.verifyToken, controllers.api.v1
       );
     });
     
-router.get('/', controllers.api.v1.productController.handleGetRoot)
+// router.get('/', controllers.api.v1.productController.handleGetRoot)
 
 router.use(controllers.api.main.onLost);
 router.use(controllers.api.main.onError);
