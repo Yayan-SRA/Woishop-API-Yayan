@@ -88,11 +88,11 @@ module.exports = {
           });
       },
 
-    //   handleGetRoot(req, res)  {
-    //     res.status(200).json({
-    //       status: 'OK',
-    //       message: 'Woishop API is up and running!'
-    //     })
-    //   }
+      handleGetRoot(req, res)  {
+        res.status(200).json({
+          status: 'OK',
+          message: 'Woishop API is up and running!'
+        })
+      }
 
 };
